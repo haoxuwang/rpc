@@ -11,8 +11,6 @@ public class HttpServer {
     // tomcat,jetty
 
     public void start(String hostname, Integer port) {
-
-
         Tomcat tomcat = new Tomcat();
 
         Server server = tomcat.getServer();
@@ -40,7 +38,6 @@ public class HttpServer {
 
         tomcat.addServlet(contextPath, "dispatcher", new DispatcherServlet());
         context.addServletMappingDecoded("/*", "dispatcher");
-
 
         try {
             tomcat.start();

@@ -8,7 +8,9 @@ public class DubboProtocol implements Protocol {
 
     @Override
     public void start(URL url) {
-        NettyServer nettyServer = new NettyServer();
+        ChannelHandler channelHandler = new DispatcherHandler(new RequestHandler());
+
+        NettyServer nettyServer = new NettyServer(channelHandler);
         nettyServer.start(url.getHostname(), url.getPort());
 
     }

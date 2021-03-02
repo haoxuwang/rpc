@@ -12,6 +12,12 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 
 public class NettyServer {
 
+    private ChannelHandler channelHandler;
+
+    public NettyServer(ChannelHandler channelHandler) {
+        this.channelHandler = channelHandler;
+    }
+
     public void start(String hostName, int port) {
         try {
             final ServerBootstrap bootstrap = new ServerBootstrap();
@@ -26,7 +32,7 @@ public class NettyServer {
                                     .weakCachingConcurrentResolver(this.getClass()
                                             .getClassLoader())));
                             pipeline.addLast("encoder", new ObjectEncoder());
-                            pipeline.addLast("handler", new NettyServerHandler());
+                            pipeline.addLast("handler", new NettyServerHandler(channelHandler));
                         }
                     });
             bootstrap.bind(hostName, port).sync();

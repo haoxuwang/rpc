@@ -12,6 +12,10 @@ public class RemoteMapRegister {
 
     public static void regist(String interfaceName, URL url){
 
+        if (getFile() != null) {
+            REGISTER = getFile();
+        }
+
         List<URL> list = REGISTER.get(interfaceName);
         if (list == null) {
             list = new ArrayList<>();
