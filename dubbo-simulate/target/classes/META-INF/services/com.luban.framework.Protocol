@@ -1,2 +1,0 @@
-http=com.tuling.framework.protocol.http.HttpProtocol
-dubbo=com.tuling.framework.protocol.dubbo.DubboProtocol
