@@ -16,6 +16,8 @@ public class ZookeeperRegister {
 
     static CuratorFramework client;
 
+    static Map<String, List<URL>> UrlCache = new HashMap<>();
+
     static {
         client = CuratorFrameworkFactory
                 .newClient("localhost:2181", new RetryNTimes(3, 1000));
@@ -36,19 +38,25 @@ public class ZookeeperRegister {
     }
 
     public static List<URL> get(String interfaceName) {
-        List<URL> urlList = new ArrayList<>();
+        if (UrlCache.containsKey(interfaceName)) {
+            return UrlCache.get(interfaceName);
+        } else {
 
-        try {
-            List<String> result = client.getChildren().forPath(String.format("/dubbo/service/%s", interfaceName));
-            for (String urlstr : result) {
-                urlList.add(JSONObject.parseObject(urlstr, URL.class));
+            List<URL> urlList = new ArrayList<>();
+
+            try {
+                List<String> result = client.getChildren().forPath(String.format("/dubbo/service/%s", interfaceName));
+                for (String urlstr : result) {
+                    urlList.add(JSONObject.parseObject(urlstr, URL.class));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-            REGISTER.put(interfaceName, urlList);
-        } catch (Exception e) {
-            e.printStackTrace();
+            UrlCache.put(interfaceName, urlList);
+            return urlList;
         }
 
-        return urlList;
+
     }
 }

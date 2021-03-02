@@ -11,6 +11,5 @@ public class Consumer {
         String xxx = helloService.sayHello("xxx");
         System.out.println(xxx);
 
-
     }
 }
