@@ -1,6 +1,6 @@
-package com.tuling.framework.protocol;
+package com.zhouyu.framework.protocol;
 
-import com.tuling.framework.register.LocalRegister;
+import com.zhouyu.framework.register.LocalRegister;
 import io.netty.channel.ChannelHandlerContext;
 
 import java.lang.reflect.Method;

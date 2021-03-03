@@ -1,12 +1,11 @@
-package com.tuling.provider;
+package com.zhouyu.provider;
 
-import com.tuling.framework.URL;
-import com.tuling.framework.protocol.NettyServer;
-import com.tuling.framework.register.LocalRegister;
-import com.tuling.framework.register.RemoteMapRegister;
-import com.tuling.framework.register.ZookeeperRegister;
-import com.tuling.provider.api.HelloService;
-import com.tuling.provider.impl.HelloServiceImpl;
+import com.zhouyu.framework.URL;
+import com.zhouyu.framework.protocol.NettyServer;
+import com.zhouyu.framework.register.LocalRegister;
+import com.zhouyu.framework.register.ZookeeperRegister;
+import com.zhouyu.provider.api.HelloService;
+import com.zhouyu.provider.impl.HelloServiceImpl;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

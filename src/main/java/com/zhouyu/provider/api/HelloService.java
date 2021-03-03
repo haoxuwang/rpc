@@ -1,4 +1,4 @@
-package com.tuling.provider.api;
+package com.zhouyu.provider.api;
 
 public interface HelloService {
 

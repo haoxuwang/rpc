@@ -1,6 +1,6 @@
-package com.tuling.provider.impl;
+package com.zhouyu.provider.impl;
 
-import com.tuling.provider.api.HelloService;
+import com.zhouyu.provider.api.HelloService;
 
 public class HelloServiceImpl implements HelloService {
 

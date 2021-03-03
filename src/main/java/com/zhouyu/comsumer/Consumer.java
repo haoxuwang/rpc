@@ -1,9 +1,7 @@
-package com.tuling.comsumer;
+package com.zhouyu.comsumer;
 
-import com.tuling.framework.protocol.Invocation;
-import com.tuling.framework.protocol.NettyClient;
-import com.tuling.framework.proxy.ProxyFactory;
-import com.tuling.provider.api.HelloService;
+import com.zhouyu.framework.proxy.ProxyFactory;
+import com.zhouyu.provider.api.HelloService;
 
 public class Consumer {
 

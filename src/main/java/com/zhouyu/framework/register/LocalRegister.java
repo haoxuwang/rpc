@@ -1,4 +1,4 @@
-package com.tuling.framework.register;
+package com.zhouyu.framework.register;
 
 import java.util.HashMap;
 import java.util.Map;

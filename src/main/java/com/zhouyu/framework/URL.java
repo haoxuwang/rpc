@@ -1,4 +1,4 @@
-package com.tuling.framework;
+package com.zhouyu.framework;
 
 import java.io.Serializable;
 

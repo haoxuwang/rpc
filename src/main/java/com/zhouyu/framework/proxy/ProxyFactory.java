@@ -1,19 +1,15 @@
-package com.tuling.framework.proxy;
+package com.zhouyu.framework.proxy;
 
-import com.tuling.framework.LoadBalance;
-import com.tuling.framework.URL;
-import com.tuling.framework.protocol.Invocation;
-import com.tuling.framework.protocol.NettyClient;
-import com.tuling.framework.register.RemoteMapRegister;
-import com.tuling.framework.register.ZookeeperRegister;
+import com.zhouyu.framework.LoadBalance;
+import com.zhouyu.framework.URL;
+import com.zhouyu.framework.protocol.Invocation;
+import com.zhouyu.framework.protocol.NettyClient;
+import com.zhouyu.framework.register.ZookeeperRegister;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ProxyFactory<T> {
 

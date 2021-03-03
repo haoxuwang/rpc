@@ -1,7 +1,7 @@
-package com.tuling.framework.register;
+package com.zhouyu.framework.register;
 
 import com.alibaba.fastjson.JSONObject;
-import com.tuling.framework.URL;
+import com.zhouyu.framework.URL;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.RetryNTimes;

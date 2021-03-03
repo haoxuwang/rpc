@@ -1,6 +1,6 @@
-package com.tuling.framework.register;
+package com.zhouyu.framework.register;
 
-import com.tuling.framework.URL;
+import com.zhouyu.framework.URL;
 
 import java.util.ArrayList;
 import java.util.HashMap;
