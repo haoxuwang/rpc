@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class NettyClient<T> {
+public class NettyClient {
 
     public NettyClientHandler client = null;
 

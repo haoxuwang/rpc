@@ -23,9 +23,7 @@ public class NettyServer {
             EventLoopGroup bossGroup = new NioEventLoopGroup(1, new DefaultThreadFactory("NettyServerBoss", true));
             EventLoopGroup workerGroup = new NioEventLoopGroup(iothreads, new DefaultThreadFactory("NettyServerWorker", true));
 
-
-            NioEventLoopGroup eventLoopGroup = new NioEventLoopGroup();
-            bootstrap.group(eventLoopGroup)
+            bootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
 

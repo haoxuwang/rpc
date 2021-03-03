@@ -2,7 +2,6 @@ package com.tuling.framework.protocol;
 
 import java.io.Serializable;
 
-
 public class Invocation implements Serializable {
 
     private String interfaceName;

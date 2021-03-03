@@ -15,6 +15,7 @@ public class RequestHandler implements ChannelHandler {
         Method method = serviceImpl.getMethod(invocation.getMethodName(), invocation.getParamTypes());
         Object result = method.invoke(serviceImpl.newInstance(), invocation.getParams());
 
+        // 返回服务结果
         ctx.writeAndFlush("Netty:" + result);
     }
 }
